@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Las Yajaira</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f9f9fb, #f1f1f1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background-color: #dbb9f5;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h5 {
+      font-weight: 700;
+    }
+
+    .btn-light.active {
+      background-color: #fff;
+      border-color: #ced4da;
+      box-shadow: none;
+    }
+
+    .status {
+      border-radius: 15px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .status-checkin {
+      background-color: #d1f7d1;
+      color: #0f5132;
+    }
+
+    .status-reservado {
+      background-color: #d1e3f7;
+      color: #084298;
+    }
+
+    .status-checkout {
+      background-color: #f8d7da;
+      color: #842029;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="https://img.freepik.com/vector-gratis/identidad-corporativa-editable-negocio-vector-logotipo-hotel-texto-oculto-hotel_53876-111556.jpg?t=st=1744914008~exp=1744917608~hmac=e0cbe7e4aeff2a63fe9ef88971a3bb1332386b9230a6693d5d1be003f32891ca&w=740"
+          alt="Logo Hotel Las Yajaira" style="border-radius: 0.75rem; margin-right: 0.75rem; width: 40px; height: 40px;" />
+        <span class="fw-bold text-white fs-5">Hotel Hidden</span>
+      </a>
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOpciones"
+        aria-controls="navbarOpciones" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Opciones del menú -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarOpciones">
+        <div class="navbar-nav">
+          <a href="dashboard.html" class="btn btn-light me-2 active">📊 Dashboard</a>
+          <a href="rooms.html" class="btn btn-light">🏨 Habitaciones</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container my-4">
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h5>Ingresos Totales</h5>
+          <h3 class="fw-bold">$15000</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h5>Tasa de Ocupación</h5>
+          <h3 class="fw-bold">75%</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h5>Habitaciones Disponibles</h5>
+          <h3 class="fw-bold">5</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-4">
+      <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary">📄 Generar Informe</button>
+      </div>
+      <h5 class="mb-4">Últimas Reservas</h5>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Huésped</th>
+              <th>Habitación</th>
+              <th>Tipo</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Noches</th>
+              <th>Precio/Noche</th>
+              <th>Total</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>María González</td>
+              <td>101</td>
+              <td>Standard</td>
+              <td>2025-04-07</td>
+              <td>2025-04-10</td>
+              <td>3</td>
+              <td>$100</td>
+              <td>$300</td>
+              <td><span class="status status-checkin">Check-in</span></td>
+            </tr>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>205</td>
+              <td>Suite</td>
+              <td>2025-04-08</td>
+              <td>2025-04-12</td>
+              <td>4</td>
+              <td>$200</td>
+              <td>$800</td>
+              <td><span class="status status-reservado">Reservado</span></td>
+            </tr>
+            <tr>
+              <td>Ana Martínez</td>
+              <td>102</td>
+              <td>Standard</td>
+              <td>2025-04-06</td>
+              <td>2025-04-08</td>
+              <td>2</td>
+              <td>$100</td>
+              <td>$200</td>
+              <td><span class="status status-checkout">Check-out</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

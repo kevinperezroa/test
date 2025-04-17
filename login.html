@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Hotel Hidden</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://img.freepik.com/foto-gratis/fondo-desenfocado-vestibulo-moderno_1203-1079.jpg?ga=GA1.1.1516679344.1714580444&semt=ais_hybrid&w=740') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .navbar {
+      background-color: #dbb9f5;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .btn-light {
+      background-color: #fff;
+      border-color: #ced4da;
+      box-shadow: none;
+    }
+
+    .form-container {
+      max-width: 450px;
+      margin: auto;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-card {
+      width: 100%;
+    }
+
+    .form-card h4 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #f9f9fb;
+    }
+
+    .form-control {
+      border-radius: 0.75rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border: 1px solid #ddd;
+    }
+
+    .btn-primary {
+      background-color: #5e2b97;
+      border: none;
+      border-radius: 0.75rem;
+      padding: 0.6rem;
+    }
+
+    .btn-primary:hover {
+      background-color: #4a217b;
+    }
+
+    .form-text,
+    .form-check-label {
+      font-size: 0.9rem;
+      color: #f9f9fb;
+    }
+
+    .link-register {
+      text-align: center;
+    }
+
+    .link-register a {
+      color: #f9f9fb;
+      text-decoration: none;
+    }
+
+    .link-register a:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+    <a class="navbar-brand d-flex align-items-center" href="./index.html">
+      <img src="https://img.freepik.com/vector-gratis/identidad-corporativa-editable-negocio-vector-logotipo-hotel-texto-oculto-hotel_53876-111556.jpg?t=st=1744914008~exp=1744917608~hmac=e0cbe7e4aeff2a63fe9ef88971a3bb1332386b9230a6693d5d1be003f32891ca&w=740" alt="Logo Hotel Las Yajaira" style="border-radius: 0.75rem; margin-right: 0.75rem; width: 40px; height: 40px;" />
+      <span class="text-white fw-bold fs-5">Hotel Hidden</span>
+    </a>
+  </nav>
+
+  <div class="form-container">
+    <div class="form-card" id="formCard">
+      <!-- Formulario de inicio de sesión -->
+      <div class="login-card">
+        <h4 class="text-center">Iniciar Sesión</h4>
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Recordarme</label>
+          </div>
+          <div class="d-grid mb-2">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+          </div>
+          <p class="form-text text-center">¿No tienes una cuenta? <a href="#" id="toRegister">Regístrate aquí</a></p>
+        </form>
+      </div>
+
+      <!-- Formulario de registro -->
+      <div class="register-card hidden">
+        <h4 class="text-center">Registrarse</h4>
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Nombre de usuario</label>
+            <input type="text" class="form-control" id="username" placeholder="Tu nombre de usuario" required />
+          </div>
+          <div class="mb-3">
+            <label for="emailReg" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="emailReg" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="passwordReg" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passwordReg" placeholder="Ingresa una contraseña" required />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="agree">
+            <label class="form-check-label" for="agree">Acepto los términos y condiciones</label>
+          </div>
+          <div class="d-grid mb-2">
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </div>
+          <p class="form-text text-center">¿Ya tienes una cuenta? <a href="#" id="toLogin">Inicia sesión aquí</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toRegister = document.getElementById('toRegister');
+    const toLogin = document.getElementById('toLogin');
+    const loginCard = document.querySelector('.login-card');
+    const registerCard = document.querySelector('.register-card');
+
+    toRegister.addEventListener('click', function (e) {
+      e.preventDefault();
+      loginCard.classList.add('hidden');
+      registerCard.classList.remove('hidden');
+    });
+
+    toLogin.addEventListener('click', function (e) {
+      e.preventDefault();
+      registerCard.classList.add('hidden');
+      loginCard.classList.remove('hidden');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

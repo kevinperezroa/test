@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Hotel Las Yajaira</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f9f9fb, #f1f1f1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background-color: #dbb9f5;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section h2 {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-card {
+      border: none;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR RESPONSIVE -->
+  <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="https://img.freepik.com/vector-gratis/identidad-corporativa-editable-negocio-vector-logotipo-hotel-texto-oculto-hotel_53876-111556.jpg?t=st=1744914008~exp=1744917608~hmac=e0cbe7e4aeff2a63fe9ef88971a3bb1332386b9230a6693d5d1be003f32891ca&w=740"
+          alt="Logo Hotel Las Yajaira"
+          style="border-radius: 0.75rem; margin-right: 0.75rem; width: 40px; height: 40px;" />
+        <span class="text-white fw-bold fs-5">Hotel Hidden</span>
+      </a>
+
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOpciones"
+        aria-controls="navbarOpciones" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenido colapsable -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarOpciones">
+        <div class="navbar-nav d-flex gap-2">
+          <a href="dashboard.html" class="btn btn-light">📊 Dashboard</a>
+          <a href="rooms.html" class="btn btn-light">🏨 Habitaciones</a>
+          <a href="login.html" class="btn btn-light">🔐 Iniciar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container text-center section">
+    <h2>Bienvenido a Hotel Hidden</h2>
+    <p class="lead">Tu lugar ideal para descansar y disfrutar de una estancia placentera. Ubicado en un entorno
+      tranquilo con servicios de primera calidad.</p>
+  </div>
+
+  <div class="container section">
+    <h2 class="text-center">Galería</h2>
+    <div class="row gallery">
+      <div class="col-md-4"><img src="https://img.freepik.com/foto-gratis/huespedes-hotel-firman-formularios-registro_482257-81581.jpg?ga=GA1.1.1516679344.1714580444&semt=ais_hybrid&w=740" alt="Hotel 1"></div>
+      <div class="col-md-4"><img src="https://img.freepik.com/foto-gratis/hamacas-sombrillas-puestas-fila_1203-185.jpg?ga=GA1.1.1516679344.1714580444&semt=ais_hybrid&w=740" alt="Hotel 2"></div>
+      <div class="col-md-4"><img src="https://img.freepik.com/foto-gratis/viejo-viajero-tocando-campana-servicio_482257-76551.jpg?ga=GA1.1.1516679344.1714580444&semt=ais_hybrid&w=740" alt="Hotel 3"></div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2 class="text-center">Información de Contacto</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>Teléfono</h5>
+          <p>+58 424 123 4567</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>Correo Electrónico</h5>
+          <p>contacto@hotelhidden.com</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>Dirección</h5>
+          <p>Calle Principal #123, Mérida, Venezuela</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="info-card">
+          <h5>Ubicación</h5>
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps?q=M%C3%A9rida,+Venezuela&output=embed" width="100%" height="250"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
